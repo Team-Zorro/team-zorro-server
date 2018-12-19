@@ -16,19 +16,20 @@ const websiteSchema = new mongoose.Schema({
   description: {
     type: String,
     required: true
-  },
-
-  blogpost: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'Blogpost',
-    required: false
   }
   // ,
-  // owner: {
+  //
+  // blogpost: {
   //   type: mongoose.Schema.Types.ObjectId,
-  //   ref: 'User',
-  //   required: true
+  //   ref: 'Blogpost',
+  //   required: false
   // }
+  ,
+  owner: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User',
+    required: false
+  }
 }, {
   timestamps: true
 })
