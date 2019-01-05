@@ -10,8 +10,8 @@ Build an application for Swedish web-conglomerate Sserpdrow! Your application's 
 </ul>
 
 ### Planning Docs
+#### ERD
 
-ERD
 ![Alt ERD](IMG_5984.JPG?raw=true)
 
 ## API Routes
