@@ -114,7 +114,7 @@ router.delete('/websites/:id', requireToken, (req, res) => {
     .then(handle404)
     .then(website => {
       // throw an error if current user doesn't own `website`
-      // requireOwnership(req, website)
+      requireOwnership(req, website)
       // delete the website ONLY IF the above didn't throw
       website.remove()
     })

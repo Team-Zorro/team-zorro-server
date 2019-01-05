@@ -112,7 +112,7 @@ router.delete('/blogs/:id', requireToken, (req, res) => {
     .then(handle404)
     .then(blog => {
       // throw an error if current user doesn't own `blog`
-      // requireOwnership(req, blog)
+      requireOwnership(req, blog)
       // delete the blog ONLY IF the above didn't throw
       blog.remove()
     })
